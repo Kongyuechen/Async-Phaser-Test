@@ -10,7 +10,11 @@ export default class TestPhysics extends Phaser.Scene {
   create() {
     const text = this.add.text(400,250, 'Testing Physics ');
     text.setOrigin(0.5, 0.5);
-    // Adding object
-    this.add.circle(400, 150, 10, 0xffffff, 1)
+    // Adding Circle Object
+    const circleObj = this.add.circle(400, 150, 10, 0xffffff, 1)
+    this.physics.add.existing(circleObj)
+    // Adding A Rectangle Object As Platform
+
+    const rectangleObj = this.add.rectangle(400, 300, 200, 20, 0xffffff, 1)
   }
 }

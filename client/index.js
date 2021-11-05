@@ -5,7 +5,13 @@ import TestPhysics from './scenes/TestPhysics';
 const config = {
   type: Phaser.AUTO,
   width: 800,
-  height: 500
+  height: 500,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 100}
+    }
+  }
 }
 
 /* game is now the instance, so if we do 'game.scene.'
