@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "phaser": "^3.55.2"
   }
 }
