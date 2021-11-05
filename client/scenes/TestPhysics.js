@@ -14,7 +14,10 @@ export default class TestPhysics extends Phaser.Scene {
     const circleObj = this.add.circle(400, 150, 10, 0xffffff, 1)
     this.physics.add.existing(circleObj)
     // Adding A Rectangle Object As Platform
-
     const rectangleObj = this.add.rectangle(400, 300, 200, 20, 0xffffff, 1)
+    this.physics.add.existing(rectangleObj, true)
+
+    // Adding Collision function
+    this.physics.add.collider(rectangleObj, circleObj)
   }
 }
